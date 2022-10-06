@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <style>
+    .date{
+      background-color: rgb(234, 242, 254);
+      color: rgb(89, 144, 234);
+    }
+   
+    .date:hover{
+      background-color: rgb(89, 144, 234);
+      color: #fff;
+    }
+    .date:visited{
+      background-color: rgb(234, 242, 254);
+      color: rgb(89, 144, 234);
+    } 
+    .date1 {
+      color: #fff;
+    }
+    .upper{
+      width: 120px;
+      
+      text-align: center;
+      font-size: 14px;
+      
+    }
+    /* .upper1{
+      margin-left: 35px;
+    } */
+    .date2{
+        margin-left: 415px;
+    }
+    .appoint{
+        margin-right: 150px;
+    }
+  </style>
+</head>
+<body>
+
+        <!-- 导航 -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">东方医院 🏥</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active mx-3">
+                <a class="nav-link" href="./indexPatient.html">首页 <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="#">科室导航</a>
+                </li>
+        
+                <li class="nav-item mx-3" >
+                    <a class="nav-link" href="#">门诊排班</a>
+                </li>
+
+                <li class="nav-item mx-3" >
+                    <a class="nav-link" href="#">预约挂号</a>
+                </li>
+
+                <li class="nav-item mx-3" >
+                    <a class="nav-link" href="./HospitalImfo.html">医院概况</a>
+                </li>
+                
+
+
+            
+            </ul>
+            </div>
+        </nav>
+        <!-- 中心内容 -->
+        <div class="container-fluid">
+            <div class="row pt-3">
+                <!-- 左边导航 -->
+                <div class="col-lg-2 ">
+                    <nav id="navbar-example3" class="navbar navbar-light">
+                        <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">内科</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ml-3 my-1" href="#item-1-1">神经内科</a>
+                            <a class="nav-link ml-3 my-1" href="#item-1-2">呼吸内科</a>
+                            <a class="nav-link ml-3 my-1" href="#item-1-3">消化内科</a>
+                            <a class="nav-link ml-3 my-1" href="#item-1-4">心血管内科</a>
+                        </nav>
+                        <a class="nav-link" href="#item-2">外科</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ml-3 my-1" href="#item-2-1">普通外科</a>
+                            <a class="nav-link ml-3 my-1" href="#item-2-2">骨科</a>
+                            <a class="nav-link ml-3 my-1" href="#item-2-3">神经外科</a>
+                        </nav>
+                        <a class="nav-link" href="#item-3">妇产科</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ml-3 my-1" href="#item-3-1">妇科</a>
+                            <a class="nav-link ml-3 my-1" href="#item-3-2">产科</a>
+                        </nav>
+                        <a class="nav-link" href="#item-4">儿科</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ml-3 my-1" href="#item-4-1">儿科</a>
+                            <a class="nav-link ml-3 my-1" href="#item-4-2">新生儿科</a>
+                        </nav>
+                        </nav>
+                    </nav>
+                </div>
+                <!-- 右边 -->
+                <div class="col-lg-10 mt-5">
+                    <!-- 医院名字 -->
+                    <p class="font-weight-light ">中国中医科学院什么门医院东区<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;儿科</span></p>
+                    <p>儿科门诊</p>
+                    <div class="row date2">2022年07月</div>
+                    <div class="row">
+                        <div class="container">
+                            
+                        </div>
+                                    <!-- 右边日历 -->
+                            <div class=" mr-4 mt-5">
+                                <div class="list-group upper ">
+                                    <a href="#" class="list-group-item list-group-item-action bg-primary date1">7月4日</a>
+                                    <a href="#" class="list-group-item list-group-item-action">有号</a>
+                                </div>
+                            </div>   
+                            <div class=" mr-4 mt-5">
+                                <div class="list-group upper ">
+                                    <a href="#" class="list-group-item list-group-item-action bg-primary date1">7月4日</a>
+                                    <a href="#" class="list-group-item list-group-item-action">有号</a>
+                                </div>
+                            </div>  
+                            <div class=" mr-4 mt-5">
+                                <div class="list-group upper ">
+                                    <a href="#" class="list-group-item list-group-item-action bg-primary date1">7月4日</a>
+                                    <a href="#" class="list-group-item list-group-item-action">有号</a>
+                                </div>
+                            </div>  
+                            <div class=" mr-4 mt-5">
+                                <div class="list-group upper ">
+                                    <a href="#" class="list-group-item list-group-item-action bg-primary date1">7月4日</a>
+                                    <a href="#" class="list-group-item list-group-item-action">有号</a>
+                                </div>
+                            </div>  
+                            <div class="mr-4 mt-5">
+                                <div class="list-group upper ">
+                                    <a href="#" class="list-group-item list-group-item-action bg-primary date1">7月4日</a>
+                                    <a href="#" class="list-group-item list-group-item-action">有号</a>
+                                </div>
+                            </div>  
+                            <div class=" mr-4 mt-5">
+                                <div class="list-group upper ">
+                                    <a href="#" class="list-group-item list-group-item-action bg-primary date1">7月4日</a>
+                                    <a href="#" class="list-group-item list-group-item-action">有号</a>
+                                </div>
+                            </div>  
+                            <div class=" mr-4 mt-5">
+                                <div class="list-group upper ">
+                                    <a href="#" class="list-group-item list-group-item-action bg-primary date1">7月4日</a>
+                                    <a href="#" class="list-group-item list-group-item-action">有号</a>
+                                </div>
+                            </div>  
+                        
+                        
+
+                    </div>
+                    <div class="container">
+                        <div class="row ">
+        
+                            <div class="card-body">
+                            <h5 class="card-title form-control-sm mt-lg-0">专家<span class="font-weight-light form-control-sm mt-0">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;李淑芳</span></h5>
+                            <p>
+                                <span class="card-text font-weight-light form-control-sm mt-0">普儿内科、中西医结合</span>
+                                <button href="#" class="btn btn-primary float-right appoint">预约挂号</button>
+                            </p>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  mt-5 col-lg-10">
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="jumbotron jumbotron-fluid ">
+            <div class="container">
+                  <p class="lead text-center">copyright HRYXYLHLJZSN@2022</p>
+             </div>
+        </div>
+
+ 
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>登录页面</title>
+
+	<link rel="stylesheet" type="text/css" href="./1.css">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+	<!-- 导入 vue 库文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+	<!-- 从 CDN 导入 axios  -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	
+
+</head>
+
+<body>
+		<div id="app">
+			<div class="box"  method="post" >
+				<h4>用户登录</h5>
+				<img src="./img/logo.png" class="mx-5 mt-3 rounded-circle">
+				
+				<div v-if="this.exist">
+					<input id="idCard" type="text"  v-model="input_idCard" placeholder="ID号">
+					<input id="patientPhone" type="password" v-model="input_phone" placeholder="密码">
+					<button type="button" v-if="this.exist" @click="loginBtn(patients)"  id="loginBtn" >登录
+				</div>
+				<div v-else>
+					<input id="idCard" type="text"  v-model="input_idCard" placeholder="ID号（身份证号）">
+					<input id="patientName"  type="text" v-model="input_name" placeholder="姓名">
+					<input id="patientPhone" type="password" v-model="input_phone" placeholder="密码(手机号）">
+					<button type="button"  @click="registerBtn(patients)"  id="registerBtn" >注册
+				</div>
+				
+				
+				<!-- <a href="./Register.html"> -->
+				
+				
+				<!-- </a> -->
+			</div>
+		</div>
+</body>
+
+<script>
+let vue = new Vue({
+	  el: '#app',
+	  data: {
+      patients:[],
+	  input_idCard:'430103200104020042',
+	  input_name:'赛文',
+	  input_phone:'13100000000',
+	  id_card:[],
+	  name:[],
+	  phone:[],
+	  exist:true,
+	
+    },
+
+
+    created() {
+      let url = 'http://localhost:8080/patient/select';
+      axios.get(url).then(res => {
+        this.patients = res.data;
+      }).catch(err => {
+        console.error(err);
+      });
+
+    },
+
+    methods: {
+		loginBtn(patients){
+			this.exist=true;
+			// 默认按钮不可点击以及不出现姓名和电话
+			let size=patients.length;
+			for(let i=0;i<7;i++){
+				this.id_card[i]=this.patients[i].id_card;
+				this.name[i]=this.patients[i].name;
+				this.phone[i]=this.patients[i].phone;
+			};
+			console.log(this.input_idCard);
+				console.log(this.input_phone);
+				console.log(this.id_card);
+				console.log(this.phone);
+			if(this.id_card.includes(this.input_idCard)&&this.phone.includes(this.input_phone)){
+				alert("登录成功！！");
+				window.location.href='./indexPatient.html';
+			}else{
+				alert("没有该用户，请先注册。");
+				this.input_idCard='';
+				this.input_name='';
+				this.input_phone='';
+				this.exist=false;
+			}
+			if(window.localStorage){
+					localStorage.value=this.input_idCard;
+					Location.href="./Register.html";
+			}
+
+      },
+
+	  registerBtn(){					
+			let url = 'http://localhost:8080/patient/add';
+			let params = {
+				id_card: this.input_idCard,
+				name: this.input_name,
+				phone:this.input_phone,
+	  		};
+			axios.put(url,params).then(res=>{}).catch(err=>{console.log(err);})
+
+
+	},
+
+}
+  })
+</script>
+
+
+</html>

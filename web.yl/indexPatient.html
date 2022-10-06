@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .card:hover{
+            box-shadow: 10px 10px 5px rgba(175, 167, 167,0.3);
+        }
+    </style>
+    <!-- 图标 -->
+  <script src="https://kit.fontawesome.com/14e0b8159c.js" crossorigin="anonymous"></script>
+     <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>首页</title>
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">东方医院 🏥</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active mx-3">
+              <a class="nav-link active" href="./indexPatient.html">首页 <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="./Department.html">科室导航</a>
+            </li>
+      
+            <li class="nav-item mx-3" >
+                <a class="nav-link" href="./Scheduling.html">医生排班</a>
+            </li>
+
+            <li class="nav-item mx-3" >
+                <a class="nav-link" href="./DoctorAppointment.html">预约挂号</a>
+            </li>
+
+            <li class="nav-item mx-3" >
+              <a class="nav-link " href="./AppointmentInfo.html">预约信息</a>
+            </li>
+
+            <li class="nav-item mx-3" >
+                <a class="nav-link" href="./HospitalImfo.html">医院概况</a>
+            </li>
+            
+
+
+           
+          </ul>
+        </div>
+    </nav>
+    <!-- 巨幕 -->
+    
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./img/4.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/5.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/6.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+    <!-- 功能部分 -->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-3 first">
+              <a href="./Department.html" class="text-decoration-none">
+                <div class="card mt-lg-5 " href="#">
+                    <!-- <img src="./img/indeximg1.png" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <i class="fa-regular fa-hospital"></i>
+                      <h5 class="card-title">科室导航</h5>
+                      <p class="card-text">Department Navigation</p>
+                      
+                    </div>
+                  </div>
+              </a>
+                
+            </div>
+            
+            <div class="col-lg-3 second">
+
+              <a href="./DoctorAppointment.html" class="text-decoration-none">
+                     <div class="card mt-lg-5">
+                        <!-- <img src="./img/indeximg1.png" class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                          <i class="fa-regular fa-calendar-check"></i>
+                          <h5 class="card-title">预约挂号</h5>
+                          <p class="card-text">Register</p>
+                          
+                        </div>
+                      </div> 
+              </a>
+                    
+            </div>
+            <div class="col-lg-3 third">
+              <a href="./AppointmentInfo.html" class="text-decoration-none">
+                <div class="card mt-lg-5 ">
+                    <!-- <img src="./img/indeximg1.png" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <i class="fa-solid fa-hand-holding-medical"></i>
+                      <h5 class="card-title">预约信息</h5>
+                      <p class="card-text">Appointment</p>
+                    </div>
+                  </div> 
+                </a>
+            </div>
+            <div class="col-lg-3 forth">
+              <a href="./DLogin.html" class="text-decoration-none">
+                 <div class="card mt-lg-5 mb-lg-5">
+                    <!-- <img src="./img/indeximg1.png" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <i class="fa-solid fa-user-doctor"></i>
+                      <h5 class="card-title">医生专用</h5>
+                      <p class="card-text">Doctor scheduling</p>
+                    </div>
+                  </div> 
+              </a>
+               
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+     <div class="jumbotron jumbotron-fluid ">
+        <div class="container">
+
+              <p class="lead text-center font-weight-lighter">copyright HRYXYLHLJZSN@2022</p>
+ 
+         </div>
+    </div>
+
+</body>
+</html>
